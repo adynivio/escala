@@ -9,23 +9,43 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     
     <link rel="apple-touch-icon" href="https://img.icons8.com/color/180/radiation.png">
+    <link rel="shortcut icon" href="https://img.icons8.com/color/180/radiation.png">
 
     <style>
-        body { background: #0056b3; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; font-family: sans-serif; color: white; }
-        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; }
+        body { 
+            background: #0056b3; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            color: white; 
+        }
+        .loader { 
+            border: 4px solid rgba(255,255,255,0.3); 
+            border-top: 4px solid #ffffff; 
+            border-radius: 50%; 
+            width: 30px; 
+            height: 30px; 
+            animation: spin 1s linear infinite; 
+            margin: 0 auto 15px;
+        }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .text { font-size: 18px; font-weight: 500; }
     </style>
 
     <script>
-        // REDIRECIONAMENTO INSTANTÂNEO
-        // Substitua pelo seu link do Google Apps Script (o /exec)
-        window.location.href = "https://script.google.com/macros/s/AKfycbzuhosTlhTe-grKrvGJFxOPdbsakBqUa613tuxFeVKYJ32Xnf6pbC2hhircweNCT5GF/exec";
+        // Aguarda 1 segundo (1000ms) para garantir que o iOS capture o ícone
+        setTimeout(function() {
+            window.location.href = "https://script.google.com/macros/s/AKfycbzuhosTlhTe-grKrvGJFxOPdbsakBqUa613tuxFeVKYJ32Xnf6pbC2hhircweNCT5GF/exec";
+        }, 1000);
     </script>
 </head>
 <body>
     <div style="text-align: center;">
-        <div class="loader" style="margin: 0 auto 15px;"></div>
-        <p>Abrindo Escala...</p>
+        <div class="loader"></div>
+        <p class="text">Abrindo Escala Digital...</p>
     </div>
 </body>
 </html>
